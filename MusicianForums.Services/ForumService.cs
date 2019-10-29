@@ -70,5 +70,10 @@ namespace MusicianForums.Services
         {
             throw new NotImplementedException();
         }
+
+        IEnumerable<ApplicationUser> IForum.GetAllActiveUsers()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

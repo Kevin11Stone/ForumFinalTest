@@ -10,7 +10,7 @@ namespace MusicianForums.Data
     {
         Forum GetById(int id);
         IEnumerable<Forum> GetAll();
-        IEnumerable<IdentityUser> GetAllActiveUsers();
+        IEnumerable<ApplicationUser> GetAllActiveUsers();
 
         Task Create(Forum forum);
         Task Delete(int forumId);

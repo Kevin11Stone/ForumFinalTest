@@ -15,7 +15,7 @@ namespace ForumFinal.Data
         {
         }
 
-        public DbSet<IdentityUser> IdentityUsers { get; set; }
+        public DbSet<ApplicationUser> IdentityUsers { get; set; }
         public DbSet<Forum> Forums { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostReply> PostsReplies { get; set; }
