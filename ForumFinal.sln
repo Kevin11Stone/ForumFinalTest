@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumFinal", "ForumFinal\Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicianForums.Data", "MusicianForums.Data\MusicianForums.Data.csproj", "{FD1CB630-6121-4A47-AF6E-65B8D7AFEB75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicianForums.Services", "MusicianForums.Services\MusicianForums.Services.csproj", "{79C524DC-527D-4617-BB6A-D6555ADB0C3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FD1CB630-6121-4A47-AF6E-65B8D7AFEB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD1CB630-6121-4A47-AF6E-65B8D7AFEB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD1CB630-6121-4A47-AF6E-65B8D7AFEB75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79C524DC-527D-4617-BB6A-D6555ADB0C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79C524DC-527D-4617-BB6A-D6555ADB0C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79C524DC-527D-4617-BB6A-D6555ADB0C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79C524DC-527D-4617-BB6A-D6555ADB0C3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
