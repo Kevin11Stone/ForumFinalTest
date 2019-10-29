@@ -5,6 +5,7 @@ using MusicianForums.Data;
 using MusicianForums.Data.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace MusicianForums.Services
@@ -27,6 +28,10 @@ namespace MusicianForums.Services
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Return all Forums with their associated posts.
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Forum> GetAll()
         {
 
@@ -39,9 +44,21 @@ namespace MusicianForums.Services
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns a single Forum corresponding to the Id passed 
+        /// in as a parameter.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Forum GetById(int id)
         {
-            throw new NotImplementedException();
+            var forum = _context.Forums.Where(forum => forum.Id == id)
+                .Include(forum => forum.Posts).ThenInclude(post => post.User)
+                .Include(forum => forum.Posts).ThenInclude(post => post.Replies)
+                .ThenInclude(r => r.User)
+                .FirstOrDefault();
+
+            return forum;
         }
 
         public Task UpdateForumDescription(int forumId, string newDescription)

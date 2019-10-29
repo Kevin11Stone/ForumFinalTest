@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MusicianForums.Data\MusicianForums.Data.csproj" />
+    <ProjectReference Include="..\MusicianForums.Services\MusicianForums.Services.csproj" />
   </ItemGroup>
 
 </Project>
