@@ -68,7 +68,7 @@ namespace ForumFinal.Controllers
             var userId = _userManager.GetUserId(User);
             var user = await _userManager.FindByIdAsync(userId);
  
-            var post = BuildPostReplies(model, user);
+            var post = BuildPost(model, user);
             await _postService.Add(post);
             // TODO: User Rating management here...
 
@@ -76,14 +76,16 @@ namespace ForumFinal.Controllers
 
         }
 
-        private Post BuildPostReplies(NewPostModel model, ApplicationUser user)
+        private Post BuildPost(NewPostModel model, ApplicationUser user)
         {
+            var forum = _forumService.GetById(model.ForumId);
             return new Post
             {
                 Title = model.Title,
                 Content = model.Content,
                 Created = DateTime.Now,
-                User = user
+                User = user,
+                Forum = forum
             };
         }
 
